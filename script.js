@@ -51,6 +51,7 @@ function playRound(computerChoice, humanChoice){
             console.log('You lose. Scissors beat paper.')
             computerScore++;
       } else {
+// Declare no winner. No score added.
             console.log("It's a draw. Nobody wins.");
       
       }
