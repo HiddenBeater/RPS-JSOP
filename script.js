@@ -2,7 +2,7 @@
 // of rock, paper, or scissors
 function getComputerChoice (){
  // Randomly generate number between 0 to 2
-       let x = (Math.random() * 4)
+       let x = (Math.random() * 3)
        console.log(x)
        
 }
