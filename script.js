@@ -3,10 +3,10 @@
 function getComputerChoice (){
  // Randomly generate number between 0 to 2
        let x = (Math.floor(Math.random() * 3));
-       console.log(x);
 // Appoint generated random number to assigned choice
        if (x === 0){
             let compChoice = ('Rock');
+// Display assigned choice in string
             console.log(compChoice);
        } else if (x === 1){
             let compChoice = ('Paper');
@@ -15,10 +15,21 @@ function getComputerChoice (){
             let compChoice = ('Scissors');
             console.log(compChoice);
        }
-// Display assigned choice in string
+}
+
+function getHumanChoice(){
+// Request prompt from human and assign human response to a variable
+      let humanChoice = prompt('Please enter your choice of weapon.');
+      console.log(humanChoice.toLowerCase());
+      console.log(humanChoice[0].toUpperCase());
+// Verify that human response is a valid answer
+      // if (humanChoice != )
+// If not valid answer, request correct answer
+
 }
 
 getComputerChoice();
+getHumanChoice();
 
 
 
