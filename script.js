@@ -30,7 +30,7 @@ function getHumanChoice(){
 }
 //Receive computer answer and human answer to play a game
 function playRound(computerChoice, humanChoice){
-// Declare winner based on computer and human answer
+// Declare human winner based on computer answer. Add score to human.
       if (computerChoice == 'rock' && humanChoice == 'paper'){
             console.log('You win! Paper beats rock.')
             humanScore++;
@@ -40,6 +40,7 @@ function playRound(computerChoice, humanChoice){
       } else if (computerChoice == 'scissors' && humanChoice == 'rock'){
             console.log('You win! Rock beats scissors.')
             humanScore++;
+// Declare computer winner based on human answer. Add score to computer
       } else if (computerChoice == 'rock' && humanChoice == 'scissors'){
             console.log('You lose. Rock beats scissors.')
             computerScore++;
