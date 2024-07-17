@@ -20,10 +20,11 @@ function getComputerChoice (){
 function getHumanChoice(){
 // Request prompt from human and assign human response to a variable
       let humanChoice = prompt('Please enter your choice of weapon.');
-      console.log(humanChoice.toLowerCase());
-      console.log(humanChoice[0].toUpperCase() + humanChoice.slice(1));
-// Verify that human response is a valid answer
-      // if (humanChoice != )
+// Convert string to uppercase first letter
+      humanChoice.toLowerCase();
+      let answer = (humanChoice[0].toUpperCase() + humanChoice.slice(1));
+      console.log(answer);
+
 // If not valid answer, request correct answer
 
 }
