@@ -5,15 +5,18 @@ function getComputerChoice (){
        let x = (Math.floor(Math.random() * 3));
 // Appoint generated random number to assigned choice
        if (x === 0){
-            let compChoice = ('Rock');
+            let compChoice = ('rock');
+            console.log(compChoice);
+            return compChoice;
 // Display assigned choice in string
-            console.log(compChoice);
        } else if (x === 1){
-            let compChoice = ('Paper');
+            let compChoice = ('paper');
             console.log(compChoice);
+            return compChoice;
        } else if (x === 2){
-            let compChoice = ('Scissors');
+            let compChoice = ('scissors');
             console.log(compChoice);
+            return compChoice;
        }
 }
 
@@ -23,16 +26,26 @@ function getHumanChoice(){
 // Convert string to uppercase first letter
       humanChoice.toLowerCase();
       let answer = humanChoice.toLowerCase();
+      return answer;
 }
-
-function playRound(humanChoice, computerChoice){
-      
+//Receive computer answer and human answer to play a game
+function playRound(computerChoice, humanChoice){
+// Declare winner based on computer and human answer
+      if (computerChoice == 'rock' && humanChoice == 'paper'){
+            console.log('You win! Paper beats rock.')
+            humanScore++;
+      } else if (computerChoice == 'paper' && humanChoice == 'scissors'){
+            console.log('You win! Scissors beats paper.')
+            humanScore++;
+      }
 }
 
 let humanScore = 0;
 let computerScore = 0;
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
+
+playRound(computerSelection, humanSelection);
 
 
 
