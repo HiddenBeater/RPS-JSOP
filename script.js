@@ -21,7 +21,7 @@ function getHumanChoice(){
 // Request prompt from human and assign human response to a variable
       let humanChoice = prompt('Please enter your choice of weapon.');
       console.log(humanChoice.toLowerCase());
-      console.log(humanChoice[0].toUpperCase());
+      console.log(humanChoice[0].toUpperCase() + humanChoice.slice(1));
 // Verify that human response is a valid answer
       // if (humanChoice != )
 // If not valid answer, request correct answer
