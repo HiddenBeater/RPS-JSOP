@@ -22,14 +22,17 @@ function getHumanChoice(){
       let humanChoice = prompt('Please enter your choice of weapon.');
 // Convert string to uppercase first letter
       humanChoice.toLowerCase();
-      let answer = (humanChoice[0].toUpperCase() + humanChoice.slice(1));
-      console.log(answer);
+      let answer = humanChoice.toLowerCase();
+}
+
+function playRound(humanChoice, computerChoice){
+      
 }
 
 let humanScore = 0;
 let computerScore = 0;
-getComputerChoice();
-getHumanChoice();
+const computerSelection = getComputerChoice();
+const humanSelection = getHumanChoice();
 
 
 
