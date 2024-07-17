@@ -24,11 +24,10 @@ function getHumanChoice(){
       humanChoice.toLowerCase();
       let answer = (humanChoice[0].toUpperCase() + humanChoice.slice(1));
       console.log(answer);
-
-// If not valid answer, request correct answer
-
 }
 
+let humanScore = 0;
+let computerScore = 0;
 getComputerChoice();
 getHumanChoice();
 
