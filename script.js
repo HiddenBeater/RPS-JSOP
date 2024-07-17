@@ -37,6 +37,15 @@ function playRound(computerChoice, humanChoice){
       } else if (computerChoice == 'paper' && humanChoice == 'scissors'){
             console.log('You win! Scissors beats paper.')
             humanScore++;
+      } else if (computerChoice == 'scissors' && humanChoice == 'rock'){
+            console.log('You win! Rock beats scissors.')
+            humanScore++;
+      } else if (computerChoice == 'rock' && humanChoice == 'scissors'){
+            console.log('You lose. Rock beats scissors.')
+            computerScore++;
+      } else if (computerChoice == humanChoice){
+            console.log("It's a draw. Nobody wins.");
+      
       }
 }
 
