@@ -63,18 +63,18 @@ function playRound(computerChoice, humanChoice){
 }
 // Start game
 function playGame(){
+      for (let round = 1; round <= 5; round++)
 // Ask for human answer
-      humanSelection;
+            getHumanChoice();
 // Generate computer answer
-      computerSelection;
+            getComputerChoice();
 // Start round.
-      let x = playRound(computerSelection, humanSelection);
-      x = 0;
- // Ask for human answer
-       humanSelection;
- // Generate computer answer
-       computerSelection;
-      
+            playRound(computerSelection, humanSelection);
+            if (round === 5){
+                  console.log('The game is over! Here are the final scores.');
+                  console.log('Human score: ' + humanScore);
+                  console.log('Computer score: ' + computerScore);
+            }
 
 // If not the 5th round, start round.
             // Round starts. Score gets added to human or computer.
