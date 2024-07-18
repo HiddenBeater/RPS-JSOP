@@ -34,30 +34,45 @@ function playRound(computerChoice, humanChoice){
       if (computerChoice == 'rock' && humanChoice == 'paper'){
             console.log('You win! Paper beats rock.')
             humanScore++;
+            return humanScore;
       } else if (computerChoice == 'paper' && humanChoice == 'scissors'){
             console.log('You win! Scissors beats paper.')
             humanScore++;
+            return humanScore;
       } else if (computerChoice == 'scissors' && humanChoice == 'rock'){
             console.log('You win! Rock beats scissors.')
             humanScore++;
+            return humanScore;
 // Declare computer winner based on human answer. Add score to computer
       } else if (computerChoice == 'rock' && humanChoice == 'scissors'){
             console.log('You lose. Rock beats scissors.')
             computerScore++;
+            return computerScore;
       } else if (computerChoice == 'paper' && humanChoice == 'rock'){
             console.log('You lose. Paper beats rock.')
             computerScore++;
+            return computerScore;
       } else if (computerChoice == 'scissors' && humanChoice == 'paper'){
             console.log('You lose. Scissors beat paper.')
             computerScore++;
+            return computerScore;
       } else {
 // Declare no winner. No score added.
             console.log("It's a draw. Nobody wins.");
       }
 }
 // Start round
+function playGame(){
+// Assign round function to a variable
+      let r = playRound(computerSelection, humanSelection);
+// Start round loop five times
+      for (let step = 0; step != 5; step++){
+            r;
+            console.log(r);
+      }
+}
 // Declare human score and computer score based on winner.
-// Repeat round
+
 // Stop repeat after 5th round
 // Display final score for human
 // Display final score for computer.
@@ -68,7 +83,8 @@ let computerScore = 0;
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 
-playRound(computerSelection, humanSelection);
+// playRound(computerSelection, humanSelection);
+playGame();
 
 
 
