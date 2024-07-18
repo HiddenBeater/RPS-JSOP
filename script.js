@@ -61,30 +61,27 @@ function playRound(computerChoice, humanChoice){
             console.log("It's a draw. Nobody wins.");
       }
 }
-// Start round
+// Start game
 function playGame(){
-// Assign round function to a variable
-      // playRound(computerSelection, humanSelection);
-// Create round variable
-      let round
+// Display winner.
 // Start round loop. Check if round reached round 5
 // If not the 5th round, start round.
-// Add score to human or computer score.
-// Stop game at 5th round.
-// Display final score for human
-// Display final score for computer.
-// Display winner.
-      if (round != 5){
-            playRound(computerSelection, humanSelection);
-      }
+            // Round starts. Score gets added to human or computer.
+      playRound(computerSelection, humanSelection);
+
+      // Stop game at 5th round.
+      // Display final score for human
+      console.log('Human score is: ' + humanScore);
+      // Display final score for computer.
+      console.log('Computer score is: ' + computerScore);
 }
 
 
 
 let humanScore = 0;
 let computerScore = 0;
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
 
 // playRound(computerSelection, humanSelection);
 playGame();
