@@ -55,9 +55,13 @@ function playRound(computerChoice, humanChoice){
             console.log("It's a draw. Nobody wins.");
       }
 }
-// Start game that consists of five rounds
-// Declare human score and computer score.
-// Play round
+// Start round
+// Declare human score and computer score based on winner.
+// Repeat round
+// Stop repeat after 5th round
+// Display final score for human
+// Display final score for computer.
+// Display winner.
 
 let humanScore = 0;
 let computerScore = 0;
