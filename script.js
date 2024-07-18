@@ -64,19 +64,22 @@ function playRound(computerChoice, humanChoice){
 // Start round
 function playGame(){
 // Assign round function to a variable
-      let r = playRound(computerSelection, humanSelection);
-// Start round loop five times
-      for (let step = 0; step != 5; step++){
-            r;
-            console.log(r);
-      }
-}
-// Declare human score and computer score based on winner.
-
-// Stop repeat after 5th round
+      // playRound(computerSelection, humanSelection);
+// Create round variable
+      let round
+// Start round loop. Check if round reached round 5
+// If not the 5th round, start round.
+// Add score to human or computer score.
+// Stop game at 5th round.
 // Display final score for human
 // Display final score for computer.
 // Display winner.
+      if (round != 5){
+            playRound(computerSelection, humanSelection);
+      }
+}
+
+
 
 let humanScore = 0;
 let computerScore = 0;
