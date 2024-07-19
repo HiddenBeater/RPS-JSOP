@@ -6,16 +6,13 @@ function getComputerChoice (){
 // Appoint generated random number to assigned choice
        if (x === 0){
             let compChoice = ('rock');
-            console.log(compChoice);
             return compChoice;
 // Display assigned choice in string
        } else if (x === 1){
             let compChoice = ('paper');
-            console.log(compChoice);
             return compChoice;
        } else if (x === 2){
             let compChoice = ('scissors');
-            console.log(compChoice);
             return compChoice;
        }
 }
