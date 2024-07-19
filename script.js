@@ -32,28 +32,28 @@ function getHumanChoice(){
 function playRound(computerChoice, humanChoice){
 // Declare human winner based on computer answer. Add score to human.
       if (computerChoice == 'rock' && humanChoice == 'paper'){
-            console.log('You win! Paper beats rock.')
+            console.log('You win! Computed picked rock.')
             humanScore++;
             return humanScore;
       } else if (computerChoice == 'paper' && humanChoice == 'scissors'){
-            console.log('You win! Scissors beats paper.')
+            console.log('You win! Computer picked paper.')
             humanScore++;
             return humanScore;
       } else if (computerChoice == 'scissors' && humanChoice == 'rock'){
-            console.log('You win! Rock beats scissors.')
+            console.log('You win! Computer picked scissors.')
             humanScore++;
             return humanScore;
 // Declare computer winner based on human answer. Add score to computer
       } else if (computerChoice == 'rock' && humanChoice == 'scissors'){
-            console.log('You lose. Rock beats scissors.')
+            console.log('Computer picked rock.')
             computerScore++;
             return computerScore;
       } else if (computerChoice == 'paper' && humanChoice == 'rock'){
-            console.log('You lose. Paper beats rock.')
+            console.log('Computer picked paper.')
             computerScore++;
             return computerScore;
       } else if (computerChoice == 'scissors' && humanChoice == 'paper'){
-            console.log('You lose. Scissors beat paper.')
+            console.log('Computer picked scissors.')
             computerScore++;
             return computerScore;
       } else {
@@ -67,28 +67,23 @@ function playGame(){
       round = 1;
 // Start round.
       while (round < 5){
+// If not the 5th round, start round.
+            // Round starts. Score gets added to human or computer.
             // Ask for human answer
             getHumanChoice();
             // Generate computer answer
             getComputerChoice();
             playRound(computerSelection, humanSelection);
-            console.log('Human score: ' + humanScore);
-            console.log('Computer score: ' + computerScore);  
-            i++    
+            round++;
       }
-// If not the 5th round, start round.
-            // Round starts. Score gets added to human or computer.
-
-                  console.log('The game is over! Here are the final scores.');
-
-            
-
-
       // Stop game at 5th round.
+            console.log('The game is over! Here are the final scores.');
       // Display final score for human
       // Display final score for computer.
-}
 
+            console.log('Human score: ' + humanScore);
+            console.log('Computer score: ' + computerScore);              
+}
 
 
 let humanScore = 0;
