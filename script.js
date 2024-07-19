@@ -27,6 +27,10 @@ function getHumanChoice(){
 }
 //Receive computer answer and human answer to play a game
 function playRound(computerChoice, humanChoice){
+      // Ask for human answer
+      getHumanChoice();
+      // Generate computer answer
+      getComputerChoice();
 // Declare human winner based on computer answer. Add score to human.
       if (computerChoice == 'rock' && humanChoice == 'paper'){
             console.log('You win! Computed picked rock.')
@@ -66,10 +70,6 @@ function playGame(){
       while (round < 5){
 // If not the 5th round, start round.
             // Round starts. Score gets added to human or computer.
-            // Ask for human answer
-            getHumanChoice();
-            // Generate computer answer
-            getComputerChoice();
             playRound(computerSelection, humanSelection);
             round++;
       }
