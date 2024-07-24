@@ -6,17 +6,14 @@ function getComputerChoice (){
 // Appoint generated random number to assigned choice
        if (x === 0){
             let compChoice = ('rock');
-            console.log('Computer chose Rock.')
             return compChoice;
 // Display assigned choice in string
        } else if (x === 1){
             let compChoice = ('paper');
             return compChoice;
-            console.log('Computer chose Paper.')
        } else if (x === 2){
             let compChoice = ('scissors');
             return compChoice;
-            console.log('Computer chose Scissors.')
        }
 }
 
@@ -26,7 +23,6 @@ function getHumanChoice(){
 // Convert string to uppercase first letter
       humanChoice.toLowerCase();
       let answer = humanChoice.toLowerCase();
-      console.log(`You chose ${answer}. `)
       return answer;
 }
 //Receive computer answer and human answer to play a game
