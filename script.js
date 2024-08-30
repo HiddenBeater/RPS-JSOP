@@ -60,7 +60,7 @@ function playRound(computerChoice, humanChoice){
 function playGame(){
 // Assign number of round
       round = 1;
-      while (round < 6){
+      while (true){
              // Round starts. Score gets added to human or computer.
             console.log(`Round ${round}`);
             playRound(getComputerChoice(), getHumanChoice());  
