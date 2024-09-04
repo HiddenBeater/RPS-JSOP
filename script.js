@@ -78,7 +78,7 @@ function playRound(computerChoice, humanChoice){
 let humanScore = 0;
 let computerScore = 0;
 
-const rkBtn = document.querySelector('#rockButton');
+const rkBtn = document.querySelector('#rockBtn');
 rkBtn.addEventListener('click', ()=> {
       getHumanChoice();
       
