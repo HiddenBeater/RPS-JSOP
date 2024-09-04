@@ -63,7 +63,7 @@ function playGame(){
       while (true){
              // Round starts. Score gets added to human or computer.
             console.log(`Round ${round}`);
-            playRound(getComputerChoice(), getHumanChoice());  
+            playRound(getComputerChoice(), humanChoice);  
             console.log('Computer score: ' + computerScore); 
             console.log('Human score: ' + humanScore);
             round++;
@@ -80,6 +80,11 @@ function playGame(){
 let humanScore = 0;
 let computerScore = 0;
 
+const rockButton = document.querySelector("#rockButton");
+rockButton.addEventListener("click", () =>{
+      let humanChoice = ('rock');
+      
+})
 
 playGame();
 
