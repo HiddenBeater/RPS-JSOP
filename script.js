@@ -78,11 +78,24 @@ function playRound(computerChoice, humanChoice){
 let humanScore = 0;
 let computerScore = 0;
 
-const rkBtn = document.querySelector('#rockBtn');
-rkBtn.addEventListener('click', ()=> {
-      getHumanChoice();
+// const rkBtn = document.querySelector('#rockBtn');
+// rkBtn.addEventListener('click', ()=> {
+//       getHumanChoice();
       
-});
+// });
 
+//Make choice of button
+const all_btns = document.querySelectorAll('.btn');
+console.log(all_btns[1]);
+
+
+let chosenAnswer = '';
+//Register button click event
+all_btns.forEach((button => {
+      button.addEventListener('click', (e) =>{
+            chosenAnswer =(e.target.innerHTML);
+            console.log(chosenAnswer);
+      })
+}))
 
 
