@@ -54,10 +54,8 @@ function playRound(computerChoice, humanChoice){
       } else {
 // Declare no winner. No score added.
             console.log();
-      }
-}
-// Start game
-function playGame(){
+      }            console.log(computerChoice);
+      console.log (humanChoice);
 // Assign number of round
       round = 1;
       while (true){
@@ -81,11 +79,10 @@ let humanScore = 0;
 let computerScore = 0;
 
 const rkBtn = document.querySelector('#rockButton');
-rkBtn.addEventListener('click', testFunction);
-
-function testFunction(){
-      alert('Rock');
-}
+rkBtn.addEventListener('click', ()=> {
+      getHumanChoice();
+      
+});
 
 
 
