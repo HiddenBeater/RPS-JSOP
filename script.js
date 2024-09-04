@@ -80,13 +80,12 @@ function playGame(){
 let humanScore = 0;
 let computerScore = 0;
 
-const rockButton = document.querySelector("#rockButton");
-rockButton.addEventListener("click", () =>{
-      let humanChoice = ('rock');
-      
-})
+const rkBtn = document.querySelector('#rockButton');
+rkBtn.addEventListener('click', testFunction);
 
-playGame();
+function testFunction(){
+      alert('Rock');
+}
 
 
 
