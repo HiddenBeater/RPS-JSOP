@@ -20,12 +20,11 @@ function getComputerChoice (){
        }
 }
 
-function getHumanChoice(){
+function getHumanChoice(chosenAnswer){
 // Request prompt from human and assign human response to a variable
-      let humanChoice = prompt('Please enter your choice of weapon.');
+      let humanChoice = choice;
 // Convert string to uppercase first letter
-      humanChoice.toLowerCase();
-      let answer = humanChoice.toLowerCase();
+      let choice = choice.toLowerCase();
       console.log(`You chose ${answer}. `)
       return answer;
 }
@@ -81,17 +80,18 @@ let computerScore = 0;
 
 //Make choice of button
 const all_btns = document.querySelectorAll('.btn');
-console.log(all_btns[1]);
 
 
-let chosenAnswer = '';
 //Register button click event
-all_btns.forEach((button => {
+let choice = all_btns.forEach((button => {
+      let chosenAnswer = '';
       button.addEventListener('click', (e) =>{
             chosenAnswer =(e.target.innerHTML);
-            console.log(chosenAnswer);
-            playRound(getComputerChoice(), chosenAnswer);
+            let finalAnswer = chosenAnswer.toLowerCase();
+            console.log(finalAnswer);
+            // getHumanChoice(chosenAnswer);
       })
 }))
 
+//playRound(getComputerChoice(), chosenAnswer)
 
