@@ -30,59 +30,54 @@ function getHumanChoice(){
       return answer;
 }
 //Receive computer answer and human answer to play a game
-function playRound(computerChoice, humanChoice){
+function playRound(computerChoice, chosenAnswer){
 // Declare human winner based on computer answer. Add score to human.
-      if (computerChoice == 'rock' && humanChoice == 'paper'){
+      if (computerChoice == 'rock' && chosenAnswer == 'paper'){
             humanScore++;
             return humanScore;
-      } else if (computerChoice == 'paper' && humanChoice == 'scissors'){
+      } else if (computerChoice == 'paper' && chosenAnswer == 'scissors'){
             humanScore++;
             return humanScore;
-      } else if (computerChoice == 'scissors' && humanChoice == 'rock'){
+      } else if (computerChoice == 'scissors' && chosenAnswer == 'rock'){
             humanScore++;
             return humanScore;
 // Declare computer winner based on human answer. Add score to computer
-      } else if (computerChoice == 'rock' && humanChoice == 'scissors'){
+      } else if (computerChoice == 'rock' && chosenAnswer == 'scissors'){
             computerScore++;
             return computerScore;
-      } else if (computerChoice == 'paper' && humanChoice == 'rock'){
+      } else if (computerChoice == 'paper' && chosenAnswer == 'rock'){
             computerScore++;
             return computerScore;
-      } else if (computerChoice == 'scissors' && humanChoice == 'paper'){
+      } else if (computerChoice == 'scissors' && chosenAnswer == 'paper'){
             computerScore++;
             return computerScore;
       } else {
 // Declare no winner. No score added.
             console.log();
       }            console.log(computerChoice);
-      console.log (humanChoice);
-// Assign number of round
-      round = 1;
-      while (true){
-             // Round starts. Score gets added to human or computer.
-            console.log(`Round ${round}`);
-            playRound(getComputerChoice(), humanChoice);  
-            console.log('Computer score: ' + computerScore); 
-            console.log('Human score: ' + humanScore);
-            round++;
-      }
-      // Stop game at 5th round.
-      console.log('The final scores are: ' )
-      // Display final score for human.
-      console.log('Human score: ' + humanScore);
-      // Display final score for computer.
-      console.log('Computer score: ' + computerScore); 
-          
+      console.log (chosenAnswer);
 }
+// Assign number of round
+//       round = 1;
+//       while (true){
+//              // Round starts. Score gets added to human or computer.
+//             console.log(`Round ${round}`);
+//             playRound(getComputerChoice(), chosenAnswer);  
+//             console.log('Computer score: ' + computerScore); 
+//             console.log('Human score: ' + humanScore);
+//             round++;
+//       }
+//       // Stop game at 5th round.
+//       console.log('The final scores are: ' )
+//       // Display final score for human.
+//       console.log('Human score: ' + humanScore);
+//       // Display final score for computer.
+//       console.log('Computer score: ' + computerScore); 
+          
+// }
 
 let humanScore = 0;
 let computerScore = 0;
-
-// const rkBtn = document.querySelector('#rockBtn');
-// rkBtn.addEventListener('click', ()=> {
-//       getHumanChoice();
-      
-// });
 
 //Make choice of button
 const all_btns = document.querySelectorAll('.btn');
@@ -95,6 +90,7 @@ all_btns.forEach((button => {
       button.addEventListener('click', (e) =>{
             chosenAnswer =(e.target.innerHTML);
             console.log(chosenAnswer);
+            playRound(getComputerChoice(), chosenAnswer);
       })
 }))
 
