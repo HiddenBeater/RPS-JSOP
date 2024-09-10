@@ -1,3 +1,5 @@
+// Universal container for score and results
+const container = document.querySelector("#score_container");
 // Create function that generates computer choice
 // of rock, paper, or scissors
 function getComputerChoice (){
@@ -6,29 +8,33 @@ function getComputerChoice (){
 // Appoint generated random number to assigned choice
        if (x === 0){
             let compChoice = ('rock');
-            console.log ('Computer chose rock.');
-            return compChoice;
+            const compAnswer = document.createElement("div");
+            compAnswer.classList.add("compAnswer");
+            compAnswer.textContent = (`Computer chose ${compChoice}`)
+            container.appendChild(compAnswer);
 // Display assigned choice in string
        } else if (x === 1){
             let compChoice = ('paper');
-            console.log('Computer chose paper.');
-            return compChoice;
+            const compAnswer = document.createElement("div");
+            compAnswer.classList.add("compAnswer");
+            compAnswer.textContent = (`Computer chose ${compChoice}`)
+            container.appendChild(compAnswer);
        } else if (x === 2){
             let compChoice = ('scissors');
-            console.log('Computer chose scissors.')
-            return compChoice;
+            const compAnswer = document.createElement("div");
+            compAnswer.classList.add("compAnswer");
+            compAnswer.textContent = (`Computer chose ${compChoice}`)
+            container.appendChild(compAnswer);
        }
 }
 
 function getHumanChoice(chosenAnswer){
 
 // Display human answer
-      const container = document.querySelector("#score_container");
       const humanAnswer = document.createElement("div");
       humanAnswer.classList.add("humanAnswer");
       humanAnswer.textContent = (`You chose ${chosenAnswer}`)
       container.appendChild(humanAnswer);
-      // console.log(`You chose ${answer}. `)
 }
 //Receive computer answer and human answer to play a game
 function playRound(computerChoice, chosenAnswer){
@@ -92,6 +98,7 @@ let choice = all_btns.forEach((button => {
             let finalAnswer = chosenAnswer.toLowerCase();
             console.log(finalAnswer);
             getHumanChoice(finalAnswer);
+            getComputerChoice();
       })
 }))
 
