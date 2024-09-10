@@ -21,12 +21,14 @@ function getComputerChoice (){
 }
 
 function getHumanChoice(chosenAnswer){
-// Request prompt from human and assign human response to a variable
-      let humanChoice = choice;
-// Convert string to uppercase first letter
-      let choice = choice.toLowerCase();
-      console.log(`You chose ${answer}. `)
-      return answer;
+
+// Display human answer
+      const container = document.querySelector("#score_container");
+      const humanAnswer = document.createElement("div");
+      humanAnswer.classList.add("humanAnswer");
+      humanAnswer.textContent = (`You chose ${chosenAnswer}`)
+      container.appendChild(humanAnswer);
+      // console.log(`You chose ${answer}. `)
 }
 //Receive computer answer and human answer to play a game
 function playRound(computerChoice, chosenAnswer){
@@ -89,7 +91,7 @@ let choice = all_btns.forEach((button => {
             chosenAnswer =(e.target.innerHTML);
             let finalAnswer = chosenAnswer.toLowerCase();
             console.log(finalAnswer);
-            // getHumanChoice(chosenAnswer);
+            getHumanChoice(finalAnswer);
       })
 }))
 
