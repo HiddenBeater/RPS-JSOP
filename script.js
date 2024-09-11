@@ -77,9 +77,11 @@ let choice = all_btns.forEach((button => {
       button.addEventListener('click', (e) =>{
             chosenAnswer =(e.target.innerHTML);
             let finalAnswer = chosenAnswer.toLowerCase();
-            let playerRoundAnswer = getHumanChoice(finalAnswer);
+            //Display human answer in DOM
+            let humanRoundAnswer = getHumanChoice(finalAnswer);
+            // Display computer answer in DOM
             let computerRoundAnswer = getComputerChoice();
-            playRound(computerRoundAnswer, playerRoundAnswer);
+            playRound(computerRoundAnswer, humanRoundAnswer);
             console.log(finalAnswer);
             console.log(computerRoundAnswer);
       })
