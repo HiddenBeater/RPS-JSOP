@@ -12,6 +12,7 @@ function getComputerChoice (){
             compAnswer.classList.add("compAnswer");
             compAnswer.textContent = (`Computer chose ${compChoice}`)
             container.appendChild(compAnswer);
+            return compChoice;
 // Display assigned choice in string
        } else if (x === 1){
             let compChoice = ('paper');
@@ -19,12 +20,14 @@ function getComputerChoice (){
             compAnswer.classList.add("compAnswer");
             compAnswer.textContent = (`Computer chose ${compChoice}`)
             container.appendChild(compAnswer);
+            return compChoice;
        } else if (x === 2){
             let compChoice = ('scissors');
             const compAnswer = document.createElement("div");
             compAnswer.classList.add("compAnswer");
             compAnswer.textContent = (`Computer chose ${compChoice}`)
             container.appendChild(compAnswer);
+            return compChoice;
        }
 }
 
@@ -59,29 +62,7 @@ function playRound(computerChoice, chosenAnswer){
             computerScore++;
             return computerScore;
       } else {
-// Declare no winner. No score added.
-            console.log();
-      }            console.log(computerChoice);
-      console.log (chosenAnswer);
-}
-// Assign number of round
-//       round = 1;
-//       while (true){
-//              // Round starts. Score gets added to human or computer.
-//             console.log(`Round ${round}`);
-//             playRound(getComputerChoice(), chosenAnswer);  
-//             console.log('Computer score: ' + computerScore); 
-//             console.log('Human score: ' + humanScore);
-//             round++;
-//       }
-//       // Stop game at 5th round.
-//       console.log('The final scores are: ' )
-//       // Display final score for human.
-//       console.log('Human score: ' + humanScore);
-//       // Display final score for computer.
-//       console.log('Computer score: ' + computerScore); 
-          
-// }
+}}
 
 let humanScore = 0;
 let computerScore = 0;
@@ -96,8 +77,11 @@ let choice = all_btns.forEach((button => {
       button.addEventListener('click', (e) =>{
             chosenAnswer =(e.target.innerHTML);
             let finalAnswer = chosenAnswer.toLowerCase();
-            getHumanChoice(finalAnswer);
-            getComputerChoice();
+            let playerRoundAnswer = getHumanChoice(finalAnswer);
+            let computerRoundAnswer = getComputerChoice();
+            playRound(computerRoundAnswer, playerRoundAnswer);
+            console.log(finalAnswer);
+            console.log(computerRoundAnswer);
       })
 }))
 
