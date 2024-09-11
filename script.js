@@ -96,7 +96,6 @@ let choice = all_btns.forEach((button => {
       button.addEventListener('click', (e) =>{
             chosenAnswer =(e.target.innerHTML);
             let finalAnswer = chosenAnswer.toLowerCase();
-            console.log(finalAnswer);
             getHumanChoice(finalAnswer);
             getComputerChoice();
       })
