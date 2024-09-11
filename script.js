@@ -1,5 +1,6 @@
 // Universal container for score and results
 const container = document.querySelector("#score_container");
+const resultsContainer = document.querySelector("#results");
 // Create function that generates computer choice
 // of rock, paper, or scissors
 function getComputerChoice (){
@@ -64,6 +65,13 @@ function playRound(computerChoice, chosenAnswer){
       } else {
 }}
 
+function replaceString(){
+      var newString = document.createElement('p');
+      newString.textContent = 'Current score is: Human 1 - Computer - 1';
+      var oldString = document.getElementById('oldString');
+      oldString.replaceWith(newString);
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -81,9 +89,11 @@ let choice = all_btns.forEach((button => {
             let humanRoundAnswer = getHumanChoice(finalAnswer);
             // Display computer answer in DOM
             let computerRoundAnswer = getComputerChoice();
-            playRound(computerRoundAnswer, humanRoundAnswer);
-            console.log(finalAnswer);
-            console.log(computerRoundAnswer);
+            playRound(computerRoundAnswer, finalAnswer);
+            console.log(humanScore);
+            console.log(computerScore);
+            replaceString();
+            
       })
 }))
 
