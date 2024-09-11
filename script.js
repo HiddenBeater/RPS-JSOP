@@ -67,9 +67,12 @@ function playRound(computerChoice, chosenAnswer){
 
 function replaceString(){
       var newString = document.createElement('p');
-      newString.textContent = 'Current score is: Human 1 - Computer - 1';
+      newString.textContent = 
+      `Current score is: Human ${humanScore} - Computer - ${computerScore}`;
       var oldString = document.getElementById('oldString');
       oldString.replaceWith(newString);
+      var pElement = document.querySelector('p');
+      pElement.id = 'oldString';      
 }
 
 let humanScore = 0;
