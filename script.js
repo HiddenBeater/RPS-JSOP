@@ -79,13 +79,22 @@ function isWinner(){
       if (humanScore == 5) {
             const humanWinner = document.createElement("div");
             humanWinner.classList.add("humanWinner");
-            humanWinner.textContent = ('You win!')
+            humanWinner.textContent = ('You win! Want to restart?')
             container.appendChild(humanWinner);
+            let restartButton = document.createElement('button');
+            let restartText = document.createTextNode("Restart");
+            restartButton.appendChild(restartText);
+            container.appendChild(restartButton);
+
       } else if (computerScore == 5){
             const computerWinner = document.createElement("div");
             computerWinner.classList.add("computerWinner");
-            computerWinner.textContent = ('Computer wins!')
+            computerWinner.textContent = ('Computer wins! Want to restart?')
             container.appendChild(computerWinner);
+            let restartButton = document.createElement('button');
+            let restartText = document.createTextNode("Restart");
+            restartButton.appendChild(restartText);
+            container.appendChild(restartButton);
       }
 }
 
