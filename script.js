@@ -115,5 +115,3 @@ let choice = all_btns.forEach((button => {
       })
 }))
 
-//playRound(getComputerChoice(), chosenAnswer)
-
