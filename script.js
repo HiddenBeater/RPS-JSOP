@@ -120,6 +120,7 @@ let choice = all_btns.forEach((button => {
             console.log(computerScore);
             replaceString();
             isWinner();
+            resetScore();
             
       })
 }))
