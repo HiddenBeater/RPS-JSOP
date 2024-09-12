@@ -9,25 +9,25 @@ function getComputerChoice (){
 // Appoint generated random number to assigned choice
        if (x === 0){
             let compChoice = ('rock');
-            const compAnswer = document.createElement("div");
-            compAnswer.classList.add("compAnswer");
-            compAnswer.textContent = (`Computer chose ${compChoice}`)
-            container.appendChild(compAnswer);
+            // const compAnswer = document.createElement("div");
+            // compAnswer.classList.add("compAnswer");
+            // compAnswer.textContent = (`Computer chose ${compChoice}`)
+            // container.appendChild(compAnswer);
             return compChoice;
 // Display assigned choice in string
        } else if (x === 1){
             let compChoice = ('paper');
-            const compAnswer = document.createElement("div");
-            compAnswer.classList.add("compAnswer");
-            compAnswer.textContent = (`Computer chose ${compChoice}`)
-            container.appendChild(compAnswer);
+            // const compAnswer = document.createElement("div");
+            // compAnswer.classList.add("compAnswer");
+            // compAnswer.textContent = (`Computer chose ${compChoice}`)
+            // container.appendChild(compAnswer);
             return compChoice;
        } else if (x === 2){
             let compChoice = ('scissors');
-            const compAnswer = document.createElement("div");
-            compAnswer.classList.add("compAnswer");
-            compAnswer.textContent = (`Computer chose ${compChoice}`)
-            container.appendChild(compAnswer);
+            // const compAnswer = document.createElement("div");
+            // compAnswer.classList.add("compAnswer");
+            // compAnswer.textContent = (`Computer chose ${compChoice}`)
+            // container.appendChild(compAnswer);
             return compChoice;
        }
 }
@@ -36,9 +36,9 @@ function getHumanChoice(chosenAnswer){
 
 // Display human answer
       const humanAnswer = document.createElement("div");
-      humanAnswer.classList.add("humanAnswer");
-      humanAnswer.textContent = (`You chose ${chosenAnswer}`)
-      container.appendChild(humanAnswer);
+      // humanAnswer.classList.add("humanAnswer");
+      // humanAnswer.textContent = (`You chose ${chosenAnswer}`)
+      // container.appendChild(humanAnswer);
 }
 //Receive computer answer and human answer to play a game
 function playRound(computerChoice, chosenAnswer){
@@ -74,7 +74,6 @@ function replaceString(){
       var pElement = document.querySelector('p');
       pElement.id = 'oldString';      
 }
-
 let humanScore = 0;
 let computerScore = 0;
 
