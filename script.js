@@ -74,6 +74,21 @@ function replaceString(){
       var pElement = document.querySelector('p');
       pElement.id = 'oldString';      
 }
+
+function isWinner(){
+      if (humanScore == 5) {
+            const humanWinner = document.createElement("div");
+            humanWinner.classList.add("humanWinner");
+            humanWinner.textContent = ('You win!')
+            container.appendChild(humanWinner);
+      } else if (computerScore == 5){
+            const computerWinner = document.createElement("div");
+            computerWinner.classList.add("computerWinner");
+            computerWinner.textContent = ('Computer wins!')
+            container.appendChild(computerWinner);
+      }
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -95,6 +110,7 @@ let choice = all_btns.forEach((button => {
             console.log(humanScore);
             console.log(computerScore);
             replaceString();
+            isWinner();
             
       })
 }))
